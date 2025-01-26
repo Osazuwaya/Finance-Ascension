@@ -1,31 +1,89 @@
-.full{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 0%;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+/* General styles */
+.stats-container {
+    width: 1440px;
+    height: 1024px;
     background: #242424;
-}
-
-.menubar_wbox{
+    position: relative;
+  }
+  
+  .header {
+    position: absolute;
+    left: 948px;
+    top: 44px;
+    width: 492px;
+    height: 223px;
+  }
+  
+  .welcome-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D3D3D3;
+    text-align: right;
+    margin-top: 8px;
+  }
+  
+  .message-box {
+    background: #202020;
+    border-radius: 8px;
+    height: 156px;
+    width: 484px;
+    position: absolute;
+    top: 47px;
+    left: 8px;
+  }
+  
+  .message-text {
+    font-size: 24px;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 5px;
+  }
+  
+  .stat-card {
+    background: #202020;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .stat-card-header {
+    color: #D3D3D3;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .progress-bar-container {
     width: 100%;
-    height: 37;
+    background: #D3D3D3;
+    border-radius: 8px;
+    height: 34px;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
     left: 0;
-    top: 8;
-    position: 'absolute';
-    background: '#202020';
-    border-top-left-radius: 8;
-    border-top-right-radius: 8;
-}
-
-.menubar_bbox{
+  }
+  
+  .progress-bar-value {
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  .stats-main-content {
+    position: absolute;
+    left: 0;
+    top: 45px;
     width: 100%;
-    height: 37;
-    left: 0;
-    top: 8;
-    position: 'absolute';
-    background: '#D3D3D3';
-    border-top-left-radius: 8;
-    border-top-right-radius: 8;
-}
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  

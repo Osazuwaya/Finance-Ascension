@@ -1,93 +1,297 @@
 import React from 'react';
-import "./stats.css"
+import "./stats.css";
+
 const Stats = () => {
-    return (
-        <div className="full">
-            <div style={{width: 492, height: 223, left: 948, top: 44, position: 'absolute'}}>
-                <div style={{width: 484, height: 39, left: 8, top: 0, position: 'absolute', textAlign: 'right', color: '#D3D3D3', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>Welcome!</div>
-                <div style={{width: 484, height: 156, left: 8, top: 47, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 484, height: 156, left: 0, top: 39, position: 'absolute', background: '#D3D3D3', borderRadius: 8}} />
-                <div style={{left: 5, top: 50, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 24, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Message [ai bot]</div>
-                <div style={{width: 41, height: 41, left: 432, top: 149, position: 'absolute', background: '#202020', borderRadius: 9999}} />
-                <div style={{width: 41, height: 41, left: 425, top: 142, position: 'absolute', background: 'white', borderRadius: 9999}} />
-                <div style={{width: 24, height: 24, left: 434, top: 151, position: 'absolute'}}>
-                <div style={{width: 12, height: 22.29, left: 6, top: 0.86, position: 'absolute'}}>
-                    <div style={{width: 0, height: 22.29, left: 6, top: -0, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 12, height: 6, left: 0, top: 0, position: 'absolute', border: '1px black solid'}}></div>
-                </div>
-                </div>
+return (
+    <div
+    style={{
+        width: '100vw',
+        height: '100vh',
+        position: 'relative',
+        background: '#242424',
+    }}
+    >
+      {/* Menu bar */}
+    <div
+    style={{
+        width: '100%',
+        height: '5vh',
+        position: 'absolute',
+        top: 0,
+        display: 'flex',
+        alignItems: 'center',
+    }}
+    ><div
+        style={{
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        }}
+    ><div
+        style={{
+            position: 'absolute',
+            top: '5px',
+            left: '5px',
+            width: '100%',
+            height: '100%',
+            background: '#202020',
+            borderTopLeftRadius: '8px',
+            borderTopRightRadius: '8px',
+        }}
+        ></div>
+        <div
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            borderTopLeftRadius: '8px',
+            borderTopRightRadius: '8px',
+        }}
+        ></div>
+    </div>
+    <div
+        style={{
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        marginLeft: '1rem',
+        }}
+    >
+        <div
+        style={{
+            position: 'absolute',
+            top: '5px',
+            left: '5px',
+            width: '30px',
+            height: '30px',
+            background: '#202020',
+            borderRadius: '4px',
+        }}
+        ></div>
+    </div>
+    </div>
+
+      {/* Current Statistics */}
+    <div
+        style={{
+            position: 'absolute',
+            top: '6vh',
+            left: '.5vw',
+            width: '30vw',
+            height: '20vh',
+        }}
+    ><div
+        style={{
+            position: 'absolute',
+            top: '5px',
+            left: '5px',
+            width: '100%',
+            height: '100%',
+            background: '#202020',
+            borderRadius: '8px',
+        }}
+        ></div>
+        <div
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            borderRadius: '8px',
+            padding: '1rem',
+        }}
+        ><h3 style={{ color: '#242424', marginBottom: '2rem', marginTop: '0rem', fontSize: 24 }}>Current Statistics</h3>
+        {['#FF0000', '#2D8CF0', '#FFBF00'].map((color, index) => (
+                <div
+                key={index}
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    marginBottom: '0.5rem',
+                }}
+                ><div
+                    style={{
+                    width: '2rem',
+                    height: '2rem',
+                    background: color,
+                    borderRadius: '50%',
+                    marginRight: '1rem',
+                    }}
+                ></div>
+                <div
+                    style={{
+                    flexGrow: 1,
+                    height: '1rem',
+                    background: '#D3D3D3',
+                    borderRadius: '8px',
+                    }}
+                ><div
+                    style={{
+                        width: `${(index + 1) * 30}%`,
+                        height: '100%',
+                        background: color,
+                        borderRadius: '8px',
+                    }}
+                ></div>
             </div>
-            <div style={{width: 1440, height: 45, left: 0, top: 0, position: 'absolute'}}>
-                <div style={{width: 1440, height: 37, left: 0, top: 8, position: 'absolute', background: '#202020', borderTopLeftRadius: 8, borderTopRightRadius: 8}} />
-                <div style={{width: 1440, height: 37, left: 0, top: 0, position: 'absolute', background: '#D3D3D3', borderTopLeftRadius: 8, borderTopRightRadius: 8}} />
-                <div style={{width: 20, height: 20, left: 11, top: 9, position: 'absolute'}}>
-                <div style={{width: 18.57, height: 14.29, left: 0.71, top: 2.86, position: 'absolute'}}>
-                    <div style={{width: 1.43, height: 1.43, left: 0, top: 0, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 12.86, height: 0, left: 5.71, top: 0.71, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 1.43, height: 1.43, left: -0, top: 6.43, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 12.86, height: 0, left: 5.71, top: 7.14, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 1.43, height: 1.43, left: -0, top: 12.86, position: 'absolute', border: '1px black solid'}}></div>
-                    <div style={{width: 12.86, height: 0, left: 5.71, top: 13.57, position: 'absolute', border: '1px black solid'}}></div>
-                </div>
-                </div>
             </div>
-            <div style={{width: 503, height: 203, left: 0, top: 45, position: 'absolute'}}>
-                <div style={{width: 484, height: 156, left: 19, top: 47, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 484, height: 156, left: 11, top: 39, position: 'absolute', background: '#D3D3D3', borderRadius: 8}} />
-                <div style={{width: 484, height: 39, left: 11, top: 0, position: 'absolute', color: '#D3D3D3', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>Current Statistics</div>
-                <div style={{width: 467, height: 42, left: 19, top: 135, position: 'absolute'}}>
-                <div style={{width: 413, height: 34, left: 53, top: 8, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 413, height: 34, left: 49, top: 4, position: 'absolute', background: 'white', borderRadius: 8}} />
-                <div style={{width: 200, height: 34, left: 262, top: 4, position: 'absolute', background: '#FFBF00', borderRadius: 8}} />
-                <div style={{width: 40, height: 40, left: 4, top: 3, position: 'absolute'}}>
-                    <div style={{width: 36.84, height: 25.16, left: 1.58, top: 7.42, position: 'absolute', background: 'black'}}></div>
-                </div>
-                <div style={{width: 40, height: 40, left: 0, top: -1, position: 'absolute'}}>
-                    <div style={{width: 36.84, height: 25.16, left: 1.58, top: 7.42, position: 'absolute', background: '#FFBF00'}}></div>
-                </div>
-                </div>
-                <div style={{width: 467, height: 42, left: 19, top: 91, position: 'absolute'}}>
-                <div style={{width: 40, height: 40, left: 4, top: 3, position: 'absolute'}}>
-                    <div style={{width: 28.12, height: 37.50, left: 5.94, top: 1.25, position: 'absolute', background: 'black'}}></div>
-                </div>
-                <div style={{width: 40, height: 40, left: 0, top: -1, position: 'absolute'}}>
-                    <div style={{width: 28.12, height: 37.50, left: 5.94, top: 1.25, position: 'absolute', background: '#2D8CF0'}}></div>
-                </div>
-                <div style={{width: 413, height: 34, left: 53, top: 8, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 413, height: 34, left: 49, top: 4, position: 'absolute', background: 'white', borderRadius: 8}} />
-                <div style={{width: 200, height: 34, left: 262, top: 4, position: 'absolute', background: '#2D8CF0', borderRadius: 8}} />
-                </div>
-                <div style={{width: 467, height: 42, left: 19, top: 47, position: 'absolute'}}>
-                <div style={{width: 40, height: 40, left: 2, top: 4, position: 'absolute'}}>
-                    <div style={{width: 35.04, height: 35.12, left: 2.48, top: 2.44, position: 'absolute', background: 'black'}}></div>
-                </div>
-                <div style={{width: 40, height: 40, left: -2, top: 0, position: 'absolute'}}>
-                    <div style={{width: 35.04, height: 35.12, left: 2.48, top: 2.44, position: 'absolute', background: '#FF0000'}}></div>
-                </div>
-                <div style={{width: 413, height: 34, left: 53, top: 8, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 413, height: 34, left: 49, top: 4, position: 'absolute', background: 'white', borderRadius: 8}} />
-                <div style={{width: 200, height: 34, left: 262, top: 4, position: 'absolute', background: '#FF0000', borderRadius: 8}} />
-                </div>
-            </div>
-            <div style={{height: 140, left: 381, top: 442, position: 'absolute', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 14, display: 'inline-flex'}}>
-                <div style={{width: 658, height: 77, color: 'white', fontSize: 64, fontFamily: 'Instrument Sans', fontWeight: '700', wordWrap: 'break-word'}}>[INSERT TITLE HERE]</div>
-                <div style={{width: 392, height: 49, textAlign: 'center', color: 'white', fontSize: 32, fontFamily: 'Instrument Sans', fontWeight: '700', wordWrap: 'break-word'}}>[insert subtitle here]</div>
-            </div>
-            <div style={{width: 370, height: 461, left: 0, top: 281, position: 'absolute'}}>
-                <div style={{width: 351, height: 453, left: 19, top: 8, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 351, height: 453, left: 11, top: 0, position: 'absolute', background: '#D3D3D3', borderRadius: 8}} />
-            </div>
-            <div style={{width: 467, height: 155, left: 973, top: 869, position: 'absolute'}}>
-                <div style={{width: 459, height: 68, left: 8, top: 87, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 459, height: 68, left: 0, top: 79, position: 'absolute', background: '#D3D3D3', borderRadius: 8}} />
-                <div style={{width: 419, height: 44, left: 20, top: 91, position: 'absolute', textAlign: 'center', color: 'black', fontSize: 36, fontFamily: 'Instrument Sans', fontWeight: '700', wordWrap: 'break-word'}}>Quests</div>
-                <div style={{width: 459, height: 79, left: 0, top: 0, position: 'absolute', textAlign: 'center', color: '#D3D3D3', fontSize: 48, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>Oracle</div>
-            </div>
-            <div style={{width: 370, height: 282, left: 0, top: 742, position: 'absolute'}}>
-                <div style={{width: 350, height: 271, left: 20, top: 11, position: 'absolute', background: '#202020', borderRadius: 8}} />
-                <div style={{width: 350, height: 271, left: 11, top: 0, position: 'absolute', background: '#D3D3D3', borderRadius: 8}} />
-            </div>
+        ))}
         </div>
+    </div>
+
+      {/* Welcome box */}
+    <div
+        style={{
+        position: 'absolute',
+        top: '6vh',
+        right: '3.5vw',
+        width: '30vw',
+        height: '25vh',
+        }}
+    ><div
+        style={{
+            position: 'absolute',
+            top: '5px',
+            left: '5px',
+            width: '100%',
+            height: '100%',
+            background: '#202020',
+            borderRadius: '8px',
+        }}
+        ></div>
+        <div
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            borderRadius: '8px',
+            padding: '1rem',
+        }}
+        >
+        <h3 style={{ color: '#D3D3D3', textAlign: 'right', marginBottom: '0rem', marginTop: '0rem', fontSize: 24 }}>Welcome!</h3>
+        <textarea
+            placeholder="Message [AI bot]"
+            style={{
+            width: '95%',
+            height: '70%',
+            borderRadius: '8px',
+            border: 'none',
+            marginTop: '1rem',
+            marginRight: '1rem',
+            padding: '0.5rem',
+            }}
+        ></textarea>
+        <button
+            style={{
+            position: 'absolute',
+            bottom: '1.5rem',
+            right: '1.5rem',
+            width: '3rem',
+            height: '3rem',
+            background: '#202020',
+            borderRadius: '50%',
+            border: 'none',
+            }}
+        >
+            ↑
+        </button>
+        </div>
+    </div>
+
+      {/* Title and subtitle */}
+    <div
+        style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        textAlign: 'center',
+        }}
+    >
+        <h1 style={{ color: 'white', fontSize: '4vw' }}>[INSERT TITLE HERE]</h1>
+        <h2 style={{ color: 'white', fontSize: '2vw' }}>[Insert Subtitle Here]</h2>
+    </div>
+
+      {/* Player and Inventory */}
+    <div
+        style={{
+        position: 'absolute',
+        bottom: '2vh',
+        left: '2vw',
+        width: '20vw',
+        height: '50vh',
+        }}
+    >
+        <div
+        style={{
+            position: 'absolute',
+            top: '0px',
+            left: '5px',
+            width: '100%',
+            height: '100%',
+            background: '#202020',
+            borderRadius: '8px',
+        }}
+        ></div>
+        <div
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            borderRadius: '8px',
+        }}
+        ></div>
+    </div>
+
+      {/* Quests */}
+    <div
+        style={{
+            position: 'absolute',
+            bottom: '2vh',
+            right: '3vw',
+            width: '24vw',
+            height: '15vh',
+        }}
+    >
+        <div
+        style={{
+            position: 'absolute',
+            top: -30,
+            left: -20,
+            width: '100%',
+            height: '100%',
+            background: '#202020',
+            borderRadius: '8px',
+        }}
+        ></div>
+        <div
+        style={{
+            position: 'absolute',
+            top: -30,
+            left: -20,
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            borderRadius: '8px',
+            padding: '1rem',
+        }}
+        >
+        <h1 style={{ color: '#D3D3D3', textAlign: 'center', marginBottom: '0rem' }}>Oracle</h1>
+        <h3 style={{ color: 'black', textAlign: 'center', marginBottom: '0rem' }}>Quests</h3>
+        </div>
+    </div>
+    </div>
     );
 };
 
