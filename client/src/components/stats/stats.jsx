@@ -20,21 +20,21 @@ return (
         <div className="current-stats">
             <div className="current-stats-shadow"></div>
             <div className="current-stats-main">
-            <h3 className="stats-title">Current Statistics</h3>
-            {["#FF0000", "#2D8CF0", "#FFBF00"].map((color, index) => (
-                <div className="stats-row" key={index}>
-                <div
-                    className="stats-icon"
-                    style={{ background: color }}
-                ></div>
-                <div className="stats-bar-container">
+                <h3 className="stats-title">Current Statistics</h3>
+                {["#FF0000", "#2D8CF0", "#FFBF00"].map((color, index) => (
+                    <div className="stats-row" key={index}>
                     <div
-                    className="stats-bar"
-                    style={{ background: color, width: `${(index + 1) * 30}%` }}
+                        className="stats-icon"
+                        style={{ background: color }}
                     ></div>
-                </div>
-                </div>
-            ))}
+                    <div className="stats-bar-container">
+                        <div
+                        className="stats-bar"
+                        style={{ background: color, width: `${(index + 1) * 30}%` }}
+                        ></div>
+                    </div>
+                    </div>
+                ))}
             </div>
         </div>
 
