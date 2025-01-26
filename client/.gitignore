@@ -26,3 +26,4 @@ dist-ssr
 node_modules
 src/main.jsx
 src/App.css
+src/assets/*
