@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ChakraProvider } from '@chakra-ui/react'
+import { system } from "@chakra-ui/react/preset";
 
 import App from './App'
 
-createRoot(document.getElementById('root')).render(
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider value={system}>
       <App />
     </ChakraProvider>
   </React.StrictMode>,
