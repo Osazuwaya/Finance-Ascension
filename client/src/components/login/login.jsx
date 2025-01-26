@@ -1,8 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
+
 import './login.css';
 
+
 const Form = () => {
+  const navigate = useNavigate();
+
   return (
     <StyledWrapper>
       <div className="wrapper">
@@ -13,11 +18,11 @@ const Form = () => {
             <span className="card-side" />
             <div className="flip-card__inner">
               <div className="flip-card__front">
-                <div className="title">Log in</div>
+                <div className="title" >Log in</div>
                 <form className="flip-card__form" action>
                   <input className="flip-card__input" name="email" placeholder="Email" type="email" />
                   <input className="flip-card__input" name="password" placeholder="Password" type="password" />
-                  <button className="flip-card__btn">Let`s go!</button>
+                  <button className="flip-card__btn" onClick={() => navigate("/main-page")}>Let`s go!</button>
                 </form>
               </div>
               <div className="flip-card__back">
@@ -40,7 +45,7 @@ const StyledWrapper = styled.div`
 display: flex;
 justify-content:center; // centers in the flex direction and the default flex-direction is row
 align-items:center; // centers perpendicular to the flex direction
-height: 0vh; // 100% view height
+height: 100vh; // 100% view height
 width: 100vw; // 100% view width
 position: absolute; // so it goes behind the current content
 `;

@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./stats.css";
+import { Box } from '@chakra-ui/react';
 
 const Stats = () => {
+    const [response, setResponse] = useState("");
+     const [prompt, setPrompt] = useState("");
+
+    const handleSend = async () => {
+        try {
+            const res = await fetch("http://localhost:3001/api/ask", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ prompt }),
+            });
+
+            const data = await res.json();
+            setResponse(data.response);
+        } 
+        catch (error) {
+            console.error("Error:", error);
+        }
+    };
+
 return (
     <div className="stats-container">
         {/* Menu bar */}
@@ -46,8 +68,26 @@ return (
             <textarea
                 placeholder="Message [AI bot]"
                 className="welcome-textarea"
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
             ></textarea>
-            <button className="welcome-button">↑</button>
+                <Box
+                    border="1px solid"
+                    borderColor="gray.300"
+                    borderRadius="md"
+                    p={4}
+                    width="100%"
+                    maxHeight="200px" // Limits height
+                    overflowY="auto" // Makes it scrollable
+                    bg="gray.50"
+                >
+                    {response ? (
+                        response
+                    ) : (
+                        <Box color="gray.500">The AI's response will appear here.</Box>
+                    )}
+                </Box>
+            <button className="welcome-button" onClick={handleSend}></button>
             </div>
         </div>
 
