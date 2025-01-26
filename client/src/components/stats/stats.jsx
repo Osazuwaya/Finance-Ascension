@@ -66,7 +66,7 @@ return (
             <div className="welcome-main">
             <h3 className="welcome-title">Welcome!</h3>
             <textarea
-                placeholder="Message [AI bot]"
+                placeholder="Ask a question"
                 className="welcome-textarea"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
@@ -84,7 +84,7 @@ return (
                     {response ? (
                         response
                     ) : (
-                        <Box color="gray.500">The AI's response will appear here.</Box>
+                        <Box color="gray.500">Response here</Box>
                     )}
                 </Box>
             <button className="welcome-button" onClick={handleSend}></button>
