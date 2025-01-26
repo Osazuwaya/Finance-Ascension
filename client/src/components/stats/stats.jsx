@@ -12,8 +12,8 @@ return (
             </div>
             <div className="menu-icon">
             <div className="menu-icon-shadow"></div>
-            <div className="menu-icon-main"></div>
-            </div>
+            {/*<button className="menu-icon-main"></button>*/}
+            <button><span className="menu-icon-main"></span></button></div>
         </div>
 
         {/* Current Statistics */}

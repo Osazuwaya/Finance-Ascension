@@ -39,8 +39,8 @@
 }
 .menu-icon {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px;
+    left: 8px;
     width: 30px;
     height: 30px;
 }
@@ -55,13 +55,40 @@
 }
 .menu-icon-main {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 30px;
     height: 30px;
     background: white;
     border-radius: 4px;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
 }
+
+button:hover .menu-icon-main {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+button:active .menu-icon-main {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e800;
+    --button_outline_color: #ff000000;
+    width: 10%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
 
 /* Current Statistics */
 .current-stats {
@@ -121,7 +148,7 @@
 .welcome-box {
     position: absolute;
     top: 6vh;
-    right: 3.5vw;
+    right: 3.3vw;
     width: 30vw;
     height: 25vh;
 }
@@ -131,7 +158,7 @@
     left: 20px;
     width: 100%;
     height: 100%;
-    background: black;
+    background: rgb(0, 0, 0);
     border-radius: 8px;
 }
 .welcome-main {
@@ -182,11 +209,13 @@
     font-size: 4vw;
     font-weight: bold;
     margin-bottom: 0;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
 }
 .subtitle {
     color: white;
     font-size: 1.5vw;
     margin-top: 1rem;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Player and Inventory */
@@ -220,7 +249,7 @@
 .quests {
     position: absolute;
     bottom: 2vh;
-    right: 3vw;
+    right: 1.5vw;
     width: 24vw;
     height: 15vh;
 }
