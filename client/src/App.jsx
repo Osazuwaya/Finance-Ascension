@@ -1,3 +1,4 @@
+import Stats from './components/stats/stats.jsx';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import MainPage from './components/MainPage/MainPage'

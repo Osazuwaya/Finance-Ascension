@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+node_modules
+src/main.jsx
+src/App.css
+src/assets/*
