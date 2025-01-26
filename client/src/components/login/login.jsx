@@ -41,7 +41,7 @@ display: flex;
 justify-content:center; // centers in the flex direction and the default flex-direction is row
 align-items:center; // centers perpendicular to the flex direction
 height: 0vh; // 100% view height
-width: 0vw; // 100% view width
+width: 100vw; // 100% view width
 position: absolute; // so it goes behind the current content
 `;
 
